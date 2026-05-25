@@ -1,12 +1,21 @@
 * [中文版本](./README_zh.md)
 # WeActStudio.CAN485DevBoardV1_ESP32
-![display](Images/1.png)
+![display](Images/1_new.png)
 
 |Dir Name|Explain|
 | :--:|:--:|
 |Doc|DataSheet|
 |Hardware|Hardware Development Kit|
 |Examples|Examples|
+
+## Hardware Version
+```
+**V1.0**
+- Initial version.
+
+**V1.1**
+- Use FPC-18Pin-0.5mm connector to output ESP32 idle pins.
+```
 
 ## Attention
 1. Pressing the GPIO0 key to power on will keep the device in Boot mode. It needs to be powered on again to run.
@@ -40,8 +49,29 @@ int vin_Volts = analogVolts * ( 51 + 510 + 51 ) / 51;
 "LED": GPIO4,
 
 // KEY
-"KEY": GPIO0
+"KEY": GPIO0,
+
+// FPC-18Pin-0.5mm Connector (Hardware version >= V1.1)
+"PIN1": GND,
+"PIN2": 3.3V,
+"PIN3": GPIO37,
+"PIN4": GPIO38,
+"PIN5": GPIO39,
+"PIN6": GPIO34,
+"PIN7": GPIO35,
+"PIN8": GPIO32,
+"PIN9": GPIO33,
+"PIN10": GPIO25,
+"PIN11": GPIO12,
+"PIN12": GPIO5,
+"PIN13": GPIO23,
+"PIN14": GPIO19,
+"PIN15": GPIO16,
+"PIN16": GPIO18,
+"PIN17": 5V,
+"PIN18": GND,
 ```
+#
 
 ```
 /*---------------------------------------

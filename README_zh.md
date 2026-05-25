@@ -8,6 +8,15 @@
 |Hardware| 硬件开发资料|
 |Examples|示例|
 
+## 硬件版本说明
+```
+**V1.0**
+- 初始版本。
+
+**V1.1**
+- 使用FPC-18Pin-0.5mm连接器引出ESP32空闲管脚。
+```
+
 ## 注意事项
 1. 按住GPIO0键上电，会一直处于Boot模式，需要重新上电才能运行。
 2. 固件烧录时需要弹出TF卡，否则会导致烧录失败。
@@ -40,7 +49,27 @@ int vin_Volts = analogVolts * ( 51 + 510 + 51 ) / 51;
 "LED": GPIO4,
 
 // KEY
-"KEY": GPIO0
+"KEY": GPIO0,
+
+// FPC-18Pin-0.5mm Connector (Hardware version >= V1.1)
+"PIN1": GND,
+"PIN2": 3.3V,
+"PIN3": GPIO37,
+"PIN4": GPIO38,
+"PIN5": GPIO39,
+"PIN6": GPIO34,
+"PIN7": GPIO35,
+"PIN8": GPIO32,
+"PIN9": GPIO33,
+"PIN10": GPIO25,
+"PIN11": GPIO12,
+"PIN12": GPIO5,
+"PIN13": GPIO23,
+"PIN14": GPIO19,
+"PIN15": GPIO16,
+"PIN16": GPIO18,
+"PIN17": 5V,
+"PIN18": GND,
 ```
 
 ```
